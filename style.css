@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: #074a47;
+    min-height: 100vh;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+
+[class*="col-"] {
+    width: 100%;
+}
+
+.top {
+    width: 100%;
+    height: 60px;
+    background: #074240;
+    box-shadow: 2px 2px 4px #ffffff95;
+    margin-top: 0;
+    position: fixed;
+    z-index: 5;
+}
+
+.top::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.about {
+    width: 90%;
+    height: auto;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom: 3px solid #ffffff80;
+    text-align: center;
+    background-color: #105652;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    flex-direction: column;
+    margin: 0 auto;
+    animation: anim 2s linear infinite;
+}
+
+@keyframes anim {
+    50% {
+        border-bottom: 3px solid red;
+        opacity: 0.8;
+    }
+
+    100% {
+        border-bottom: 3px solid yellow;
+        opacity: 0.8;
+    }
+}
+
+.about h2 {
+    color: #ffffff90;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px #FF000090;
+    padding: 0 5px;
+    text-align: center;
+}
+
+.about i {
+    animation: anim2 2s linear infinite;
+}
+
+@keyframes anim2 {
+    50% {
+        box-shadow: 2px 2px 4px yellow;
+    }
+
+    100% {
+        box-shadow: 2px 2px 4px #074240;
+    }
+}
+
+.about p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #ffffff80;
+    text-align: left;
+    padding: 7px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.about mark{
+    background-color: rgb(3, 60, 3);
+    color: #ffffff;
+    opacity: 0.95;
+}
+
+.about::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.copyright {
+    background: transparent;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+.copyright p {
+    font-size: x-small;
+    letter-spacing: 1px;
+    color: yellow;
+    opacity: 0.5;
+}
+
+.copyright::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background: #d1e5ff;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(red, yellow, green);
+    border-radius: 10px;
+}
